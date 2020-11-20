@@ -1,24 +1,19 @@
-# shoopinglist
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<div>
+  <div style="text-align:center;">
+    <h2>Event Manager</h2>
+   
+  </div>
+  
+  <div>
+    <p>This is simple Demo website for managing Events.            
+    </p>
+   
+  </div>
+  
+  <div>
+    <h4>Project Description</h4>
+    <p> This project is carried out to learn basics of Vue js using Vuex for managing application state. This project also uses vue Router for handling navigation with routes.</p>
+  </div>
+  
+    
+</div>
