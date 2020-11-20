@@ -1,7 +1,7 @@
 <div>
   <div style="text-align:center;">
     <h2>Event Manager</h2>
-   
+    <a href="https://priceless-bassi-d229f3.netlify.app">Visit EvenManager Website (Netlify)</a>
   </div>
   
   <div>
