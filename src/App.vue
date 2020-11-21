@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <h2>Event Manager</h2>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Public Event</router-link> |
+      <router-link to="/about">My Event</router-link>
     </div>
     <router-view/>
   </div>

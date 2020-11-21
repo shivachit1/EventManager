@@ -1,9 +1,9 @@
 <template>
     <div class="flex-container"> 
         
-        <div v-bind:key="event.id" v-for="event in eventList" class="item-div">
+        <div v-bind:key="event.id" v-for="event in allEvents" class="item-div">
             
-            <Event v-bind:event="event" v-on:del-event="$emit('del-event',event)"/>
+            <Event v-bind:event="event"/>
         </div>
     </div>
 </template>
@@ -11,12 +11,14 @@
 <script>
 
 import Event from './Event';
+import {mapGetters } from 'vuex';
 export default {
    name:"EventList",
    components:{
        Event
    },
-   props:["eventList"]
+   computed:mapGetters(['allEvents']),
+   
 }
 </script>
 

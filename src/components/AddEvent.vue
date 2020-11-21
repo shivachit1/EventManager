@@ -1,5 +1,5 @@
 <template>
-<form  @submit="addItem">
+<form  @submit="onSubmit">
     <span>Create new Event</span>
     <div class="flex">
     
@@ -13,6 +13,7 @@
 
 <script>
 import {v4 as uuidv4} from 'uuid';
+import { mapActions } from 'vuex';
 export default {
     name:"AddEvent",
     data (){
@@ -22,7 +23,8 @@ export default {
         }; 
     },
     methods:{
-        addItem(e){
+       ...mapActions(["addEvent"]),
+        onSubmit(e){
             e.preventDefault();
             const newEvent = {
                id:uuidv4(),
@@ -31,7 +33,7 @@ export default {
             completed:false
             };
 
-            this.$emit("add-event",newEvent);
+            this.addEvent(newEvent);
             this.eventName='';
             this.eventDescription="";
         }

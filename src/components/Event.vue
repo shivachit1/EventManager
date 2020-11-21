@@ -1,34 +1,36 @@
 <template>
-    <div v-bind:class="{'is-completed':event.completed}">
-        <input type="checkbox" v-on:change="markComplete">
+    <div>
+    
         <div>
-           
-            
             <h4>{{event.name}}</h4>
             <p>{{event.eventDescription}}</p>
+            <p>Going: {{event.completed}}</p>
         </div>
-         <button class="green-btn" @click="$emit('del-event',event)">Going</button>
-         <button class="red-btn" @click="$emit('del-event',event)">May be</button>
+         <button class="green-btn" @click="mark">Going</button>
+         <button class="red-btn" @click="deleteEvnt">May be</button>
     </div>
 </template>
 
 <script>
+import {mapActions } from 'vuex';
 export default {
     name:"Event",
     props:["event"],
     methods:{
-        markComplete(){
-           this.event.completed=!this.event.completed;
-        }
+        ...mapActions(['deleteEvent']),
+        ...mapActions(['markGoing']),
+       deleteEvnt(){
+           this.deleteEvent(this.event);
+       },
+       mark(){
+            this.markGoing(this.event);
+       }
     }
 }
 </script>
 
 <style scoped>
 
-.is-completed{
-    text-decoration: line-through;
-}
 .red-btn{
     background-color: red;
     color: wheat;

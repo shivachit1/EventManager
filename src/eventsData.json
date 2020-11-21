@@ -1,0 +1,23 @@
+{
+    "events" :[
+    {
+      "id":1,
+      "name":"Birthday Party",
+      "eventDescription":"Shiva's Birthday Party",
+      "completed":false
+    },
+    {
+      "id":2,
+      "name":"Wedding Ceremony",
+      "eventDescription":"Nikul and Ronda weeding ceremondy",
+      "completed":false
+    },
+    {
+      "id":3,
+      "name":"Baby Shower",
+      "eventDescription":"baby shower at Ronda house",
+      "completed":true
+    }
+
+  ]
+}
