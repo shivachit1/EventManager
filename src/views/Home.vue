@@ -39,15 +39,16 @@ export default {
   text-align: center;
 }
 .blue-btn{
-    background-color: rgb(25, 68, 185);
-    color: rgb(251, 251, 251);
-    padding: 8px;
+    background-color: rgba(55, 40, 228, 0.884);
+    color: rgb(255, 255, 255);
+    padding: 10px;
     margin:8px;
     height: fit-content;
     outline: none;
     text-decoration: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 

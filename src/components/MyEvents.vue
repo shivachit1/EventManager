@@ -51,7 +51,6 @@ computed:mapGetters(["myEvents"]),
   display: inline-block;
   text-align: center;
   margin: 12px;
-  padding: 4px;
   border-radius: 20px 20px;
   box-shadow: 0 4px 8px 0 rgba(223, 151, 151, 0.575);
 }

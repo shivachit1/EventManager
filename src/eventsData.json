@@ -8,7 +8,8 @@
       "startTime":"10:30",
       "endTime":"12:30",
       "eventDescription":"Online interview with company HR over Zoom.",
-      "eventAddress":"Poutamantie 9"
+      "eventAddress":"Poutamantie 9",
+      "going":false
     },
     {
       "id":2,
@@ -18,7 +19,8 @@
       "startTime":"19:30",
       "endTime":"22:30",
       "eventDescription":"Nikul and Nikki 1st marriage annniversary Party",
-      "eventAddress":"Malimi 9"
+      "eventAddress":"Malimi 9",
+      "going":false
     },
     {
       "id":3,
@@ -28,7 +30,8 @@
       "startTime":"14:00",
       "endTime":"17:30",
       "eventDescription":"X and Y wedding",
-      "eventAddress":"Punavuori 9"
+      "eventAddress":"Punavuori 9",
+      "going":false
     }
 
   ]

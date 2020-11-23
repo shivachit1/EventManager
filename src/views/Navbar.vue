@@ -4,6 +4,7 @@
       <div id="nav">
           <ul>
         <li><router-link to="/">Public Event</router-link></li>
+        /
         <li><router-link to="/about">My Event</router-link></li>
       </ul> 
       </div>
@@ -37,7 +38,7 @@ export default {
 }
 li{
   display: inline;
-  margin-right: 10px;
+  margin: 10px;
   text-align: center;
 }
 

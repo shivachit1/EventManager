@@ -1,17 +1,21 @@
 <template>
     <div class="container">
     
-        <div>
+        
             <h3>{{event.eventName}}</h3>
-            <h6>Organiser: {{event.createdBy}}</h6>
+            <h4>Organiser: {{event.createdBy}}</h4>
             <h5>{{event.eventDate}}</h5>
             <h5>{{event.startTime}} - {{event.endTime}}</h5>
             <span>{{event.eventAddress}}</span>
             
             <p>{{event.eventDescription}}</p>
-        </div>
-         <button class="green-btn" @click="mark">Going</button>
-         <button class="red-btn" @click="deleteEvnt">May be</button>
+       
+         <button v-if="!event.going" class="green-btn" @click="mark">Join Event</button>
+         <div v-if="event.going">
+             <h4>You are going</h4>
+            <button v-if="event.going" class="red-btn" @click="mark">Unjoin Event</button>
+         </div>
+         
     </div>
 </template>
 
@@ -36,7 +40,14 @@ export default {
 <style scoped>
 
 .container{
-    padding: 10px;
+    padding:0px
+}
+h3{
+    background-color: rgba(211, 82, 12, 0.801);
+    color: rgb(245, 238, 238);
+    margin:0;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
 }
 h5{
     margin:0;
@@ -53,27 +64,32 @@ span{
         display: inline-block;
         margin:10px;
 }
+p{
+    margin:8px;
+}
 .red-btn{
-    background-color: red;
+    background-color: rgb(194, 63, 63);
     color: rgb(255, 255, 255);
     padding: 8px;
-    margin:8px;
+    margin:20px;
     height: fit-content;
     outline: none;
     text-decoration: none;
     border: none;
     border-radius: 10px;
+    font-weight: bold;
 }
 .green-btn{
     background-color: rgb(6, 190, 68);
     color: rgb(252, 252, 252);
     padding: 8px;
-    margin:8px;
+    margin:25px;
     height: fit-content;
     outline: none;
     text-decoration: none;
     border: none;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 .del:hover{

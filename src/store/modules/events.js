@@ -29,10 +29,10 @@ const actions ={
 };
 const mutations={
     addEvent :(state,event)=> (state.events=[...state.events,event]),
-    deleteEvent:(state,event)=>(state.events=state.events.filter(item=> item!==event)),
+    deleteEvent:(state,event)=>(state.myEvents=state.myEvents.filter(item=> item!==event)),
     markGoing:(state,event)=>{
         let i = state.events.findIndex(f => f.id === event.id);
-        state.events[i].completed = !state.events[i].completed;
+        state.events[i].going = !state.events[i].going;
     },
     getMyEvents:(state,user)=>{
         state.myEvents=state.events.filter(item=> item.createdBy==user.userName);

@@ -3,7 +3,7 @@
       <form v-if="!getUser.userAvailable" @submit="saveUserData" class="form">
         <label>Enter your name  here: </label>
         <input class="input" type="text" v-model="userName" placeholder="Full Name" required>
-        <input class="btn" type="submit" value="save">
+        <input class="btn" type="submit" value="Save">
         
       </form>
 
@@ -51,25 +51,31 @@ export default {
   transition: all 3s ease;
   border-radius: 20px 20px;
 }
+label{
+    font-weight: bold;
+}
   
    .input{
+       font-weight: bold;
       width: 90%;
         padding: 5px;
         margin: 20px auto;
        text-align:center;
        display: block;
-       border: 0px 0px 0px 0px bisque;
+       border: 0px 1px 1px 0px rgb(224, 90, 18);
    }
    
    .btn{
-    background-color: rgb(4, 122, 43);
+       width: 80px;
+   background-color: rgb(6, 190, 68);
     color: rgb(255, 255, 255);
-    padding: 8px;
+    padding: 10px;
     margin:8px;
     height: fit-content;
     outline: none;
     text-decoration: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    font-weight: bold;
    }
 </style>

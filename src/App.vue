@@ -28,5 +28,8 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+h2{
+  color: rgb(236, 93, 16);
+}
 
 </style>

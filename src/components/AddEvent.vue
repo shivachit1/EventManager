@@ -90,6 +90,7 @@ export default {
         endTime: this.endTime,
         eventDescription: this.eventDescription,
         eventAddress: this.eventAddress,
+        going:false
       };
       this.addEvent(newEvent);
       this.handleModal();
@@ -117,6 +118,7 @@ export default {
   transition: opacity 2s ease;
   justify-content: center;
   overflow-y:scroll;
+  
 }
 
 .form {
@@ -128,24 +130,25 @@ export default {
   height: auto;
   top: 50%;
   left: 50%;
-  padding: 10px;
-  margin-right: 40px;
+  padding: 8px;
+  margin-right: 50px;
   transform: translate(-50%, -50%);
   color: black;
   transition: all 3s ease;
   border-radius: 20px 20px;
 }
 span {
-  color: #42b983;
+  color: rgb(236, 93, 16);
   font-size: 24px;
   font-weight: bold;
-  margin: 20px;
+  margin: 10px;
   display: inline-block;
 }
 label {
   color: #42b983;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
+  margin-top:10px;
 }
 textarea,
 input {
@@ -153,6 +156,7 @@ input {
   margin: 5px;
   flex: 100%;
   font-weight: italic;
+  
 }
 .flex {
   width: 300px;
@@ -166,7 +170,7 @@ input {
 }
 
 .blue-btn {
-  background-color: rgb(25, 68, 185);
+  background-color: rgba(55, 40, 228, 0.884);
   color: rgb(251, 251, 251);
   padding: 8px;
   margin: 8px;
@@ -174,7 +178,8 @@ input {
   outline: none;
   text-decoration: none;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .close {
