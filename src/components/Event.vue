@@ -1,10 +1,12 @@
 <template>
-    <div>
+    <div class="container">
     
         <div>
-            <h4>{{event.name}}</h4>
+            <h3>{{event.eventName}}</h3>
+            <h6>{{event.eventDate}}</h6>
+            <h6>{{event.startTime}} - {{event.endTime}}</h6>
+            <span>{{event.eventAddress}}</span>
             <p>{{event.eventDescription}}</p>
-            <p>Going: {{event.completed}}</p>
         </div>
          <button class="green-btn" @click="mark">Going</button>
          <button class="red-btn" @click="deleteEvnt">May be</button>
@@ -31,6 +33,19 @@ export default {
 
 <style scoped>
 
+.container{
+    padding: 10px;
+}
+h6{
+    margin:0;
+}
+span{
+        color: #42b983;
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        margin:10px;
+}
 .red-btn{
     background-color: red;
     color: wheat;

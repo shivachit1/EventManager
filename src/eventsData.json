@@ -2,21 +2,30 @@
     "events" :[
     {
       "id":1,
-      "name":"Birthday Party",
-      "eventDescription":"Shiva's Birthday Party",
-      "completed":false
+      "eventName":"Interview with HR",
+      "eventDate":"23/11/2020",
+      "startTime":"10:30",
+      "endTime":"12:30",
+      "eventDescription":"Online interview with company HR over Zoom.",
+      "eventAddress":"Poutamantie 9"
     },
     {
       "id":2,
-      "name":"Wedding Ceremony",
-      "eventDescription":"Nikul and Ronda weeding ceremondy",
-      "completed":false
+      "eventName":"Marriage anniversary",
+      "eventDate":"23/11/2020",
+      "startTime":"19:30",
+      "endTime":"22:30",
+      "eventDescription":"Nikul and Nikki 1st marriage annniversary Party",
+      "eventAddress":"Malimi 9"
     },
     {
       "id":3,
-      "name":"Baby Shower",
-      "eventDescription":"baby shower at Ronda house",
-      "completed":true
+      "eventName":"Wedding ceremoney",
+      "eventDate":"23/11/2020",
+      "startTime":"14:00",
+      "endTime":"17:30",
+      "eventDescription":"X and Y wedding",
+      "eventAddress":"Punavuori 9"
     }
 
   ]

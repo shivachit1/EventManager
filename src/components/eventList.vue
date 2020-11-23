@@ -40,4 +40,10 @@ export default {
   border-radius: 20px 20px;
   box-shadow: 0 4px 8px 0 rgba(223, 151, 151, 0.575);
 }
+
+@media only screen and (max-width: 600px) {
+ .item-div{
+  flex: 0 1 calc(100% - 2.9em);
+}
+}
 </style>
