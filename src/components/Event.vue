@@ -3,9 +3,11 @@
     
         <div>
             <h3>{{event.eventName}}</h3>
-            <h6>{{event.eventDate}}</h6>
-            <h6>{{event.startTime}} - {{event.endTime}}</h6>
+            <h6>Organiser: {{event.createdBy}}</h6>
+            <h5>{{event.eventDate}}</h5>
+            <h5>{{event.startTime}} - {{event.endTime}}</h5>
             <span>{{event.eventAddress}}</span>
+            
             <p>{{event.eventDescription}}</p>
         </div>
          <button class="green-btn" @click="mark">Going</button>
@@ -36,8 +38,13 @@ export default {
 .container{
     padding: 10px;
 }
-h6{
+h5{
     margin:0;
+     color: blue;
+}
+h6{
+    margin:4;
+   
 }
 span{
         color: #42b983;
@@ -48,7 +55,7 @@ span{
 }
 .red-btn{
     background-color: red;
-    color: wheat;
+    color: rgb(255, 255, 255);
     padding: 8px;
     margin:8px;
     height: fit-content;
@@ -59,7 +66,7 @@ span{
 }
 .green-btn{
     background-color: rgb(6, 190, 68);
-    color: wheat;
+    color: rgb(252, 252, 252);
     padding: 8px;
     margin:8px;
     height: fit-content;

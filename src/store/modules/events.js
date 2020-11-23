@@ -2,10 +2,12 @@ import eventsData from '../../eventsData.json'
 console.log(eventsData.events)
 
 const state ={
-    events : eventsData.events
+    events : eventsData.events,
+    myEvents:''
 };
 const getters={
-    allEvents: (state)=> state.events
+    allEvents: (state)=> state.events,
+    myEvents:(state)=>state.myEvents
 };
 const actions ={
     deleteEvent ({commit},event){
@@ -18,6 +20,11 @@ const actions ={
       },
       markGoing({commit},event){
         commit("markGoing",event)
+      },
+      getMyEvents({commit},user){
+          commit("getMyEvents",user);
+          
+
       }
 };
 const mutations={
@@ -26,6 +33,10 @@ const mutations={
     markGoing:(state,event)=>{
         let i = state.events.findIndex(f => f.id === event.id);
         state.events[i].completed = !state.events[i].completed;
+    },
+    getMyEvents:(state,user)=>{
+        state.myEvents=state.events.filter(item=> item.createdBy==user.userName);
+        console.log(state.myEvents.length)
     }
    
 };

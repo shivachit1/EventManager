@@ -61,7 +61,7 @@
 
 <script>
 import { v4 as uuidv4 } from "uuid";
-import { mapActions } from "vuex";
+import { mapActions,mapGetters } from "vuex";
 export default {
   name: "AddEvent",
   data() {
@@ -78,11 +78,13 @@ export default {
   methods: {
     ...mapActions(["addEvent"]),
     ...mapActions(["handleModal"]),
+    ...mapGetters(["getUser"]),
     onSubmit(e) {
       e.preventDefault();
       const newEvent = {
         id: uuidv4(),
         eventName: this.eventName,
+        createdBy:this.getUser().userName,
         eventDate: this.eventDate,
         startTime: this.startTime,
         endTime: this.endTime,
@@ -96,6 +98,9 @@ export default {
       this.handleModal();
     },
   },
+  computed:{
+    
+  }
 };
 </script>
 
